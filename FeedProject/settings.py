@@ -102,7 +102,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+     },
 ]
 
 
@@ -132,3 +132,9 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = 'users:login'
+
+
+#Heroku settings.
+import django_heroku
+django_heroku.settings(locals())
+
